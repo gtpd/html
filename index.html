@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Congrats</title>
+</head>
+<body>
+<h1 id="p">You have made it far, now input the code we gave you on the last clue and we will reward you.</h1>
+<form>
+    <input type="text" id="te">
+    <input type="button" onclick="myFunction()" value="Submit" id="t">
+</form>
+<h3 id="f"></h3>
+<h4 id="g"></h4>
+<script>
+var y = 0;
+    function myFunction() {
+    var g = document.getElementById("te").value;
+    if (g > 0) {
+    console.log("no");
+    }else if (g == "GTPDRMBLNWRK1245"){
+    var text = document.createTextNode(makeCode());
+    document.getElementById("f").appendChild(text);
+    var text2 = document.createTextNode("DM this to @gatechpd on instagram to redeem your reward. \nMust be following to be applicable")
+    document.getElementById("g").appendChild(text2);
+    } else {
+    var a = document.createTextNode("this is not a valid code try again");
+    document.getElementById("g").appendChild(a);
+    }
+    document.getElementById("t").disabled = true;
+    }
+
+    function makeCode(){
+    var num = Math.floor(Math.random() * 5);
+    switch(num) {
+    case 0:
+    return "PTDSAET34";
+    case 1:
+    return "GTDFSTGRE5";
+    case 2:
+    return "GTVGTFDSFR4";
+    case 3:
+    return "jfjfkrjtTGF";
+    case 4:
+    return "GTDSFTRFGTTH";
+    default:
+    return "FGGTDSFGTH56";
+    }
+    }
+</script>
+</body>
+</html>
